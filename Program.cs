@@ -7,46 +7,90 @@ using System.Xml.Schema;
 
 namespace L20230719
 {
-    /// <summary>
-    /// ver 2.0
-    /// </summary>
-    class A
+    class Fule
+    { }
+    class Gasolin : Fule
     {
-        //accessor
-        public A() { }
-        ~A() { }
 
-        public int key
-        {  
-            get
-            {
-                //초기값이 없으면 
-                //파일에서 읽기
-                return _key;
-            }
+    }
+    class Dissel : Fule
+    {
 
-            set
+    }
+    class Car
+    {
+        public void SetFule(Fule gasolin) 
+        {
+            //if 가솔린 넣는다.
+        }
+        public Fule GetFule() { return new Fule(); }
+
+        private Fule fule;
+    }
+
+    class TV
+    {
+        public TV()
+        {
+            _tr = 10;
+        }
+        public void On() { }
+        public void Off() { }
+
+        private void Tune() 
+        {
+            Console.WriteLine("튠한다.");
+        }
+
+        //C++
+        //public void SetLCD() {}
+        //public int GetLCD() { return LCD; }
+        //public void SetDiode() { }
+        //public int GetDiode() { return Diode; }
+        //public void SetTR() { }
+        //public int GetTR() { return TR; }
+
+        public int lcd {  get; }
+
+        public int tr { get; set; }
+
+    }
+
+    class Engine
+    {
+        public void Run() 
+        {
+            while(true)
             {
-                if (value >= 1111 && value <= 9999)
-                {
-                    //파일에 저장
-                    _key = value;
-                }
+                Input();
+                Update();
+                Render();
             }
         }
 
-        private int _key;
+        private void Update()
+        {
+
+        }
+        private void Render() 
+        {
+        }
+
+        private void Input()
+        {
+
+        }
+
     }
 
     internal class Program
     {
         static void Main(string[] args)
         {
-            A a = new A();
 
-            a.key = 1234;
-            a.key = 1;
-            Console.WriteLine(a.key);
+            TV tv = new TV();
+            tv.tr = 1;
+            Console.WriteLine(tv.tr);
 
         }
     }
