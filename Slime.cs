@@ -6,27 +6,17 @@ using System.Threading.Tasks;
 
 namespace L20230719
 {
-    class Slime
+    class Slime : Monster
     {
         public Slime()
         {
-            Console.WriteLine("슬라임이 생성 되었다.");
+            name = "슬라임";
+            Console.WriteLine(name + "이/가 생성 되었다.");
         }
 
-        public int hp = 0;
-        public int gold = 0;
-
-        public void Move()
+        ~Slime()
         {
-            Console.WriteLine("슬라임이 움직인다.");
-        }
-        public void Attack()
-        {
-            Console.WriteLine("슬라임이 공격한다.");
-        }
-        public void Die()
-        {
-            Console.WriteLine("슬라임이 죽었다.");
+            Console.WriteLine(name + "이/가 삭제되었습니다.");
         }
     }
 }

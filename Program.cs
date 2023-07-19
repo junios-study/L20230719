@@ -10,10 +10,13 @@ namespace L20230719
     {
         static void Main(string[] args)
         {
-
             Goblin goblin = new Goblin();
             goblin.Attack();
             goblin.Move();
+
+            Hog hog = new Hog();
+            hog.Attack();
+            hog.Move();
 
         }
     }

@@ -6,27 +6,17 @@ using System.Threading.Tasks;
 
 namespace L20230719
 {
-    class Hog
+    class Hog : Monster
     {
         public Hog()
         {
-            Console.WriteLine("멧돼지가 생성 되었다.");
+            name = "멧돼지";
+            Console.WriteLine(name + "이/가 생성 되었다.");
         }
 
-        public int hp = 0;
-        public int gold = 0;
-
-        public void Move()
+        ~Hog()
         {
-            Console.WriteLine("멧돼지가 움직인다.");
-        }
-        public void Attack()
-        {
-            Console.WriteLine("멧돼지가 공격한다.");
-        }
-        public void Die()
-        {
-            Console.WriteLine("멧돼지가 죽었다.");
+            Console.WriteLine(name + "이/가 삭제되었습니다.");
         }
     }
 }
