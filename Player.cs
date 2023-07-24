@@ -7,7 +7,7 @@ using System.Xml.Schema;
 
 namespace L20230719
 {
-    class Player
+    class Player 
     {
         public Player()
         {

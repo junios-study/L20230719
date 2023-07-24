@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace L20230719
 {
@@ -6,45 +8,39 @@ namespace L20230719
     {
         static void Main(string[] args)
         {
+            Object temp = new int();
+
             //숫자
             Random rand = new Random();
 
+            List<Object> monsters = new List<Object>();
+
             //초기화
             int goblinCount = rand.Next(1, 4);
-            Goblin[] goblins = new Goblin[goblinCount];
             for(int i = 0; i < goblinCount; i++) 
             {
-                goblins[i] = new Goblin();
+                monsters.Add(new Goblin());
             }
 
             int hogCount = rand.Next(1, 4);
-            Hog[] hogs = new Hog[hogCount];
             for (int i = 0; i < hogCount; i++)
             {
-                hogs[i] = new Hog();
+                monsters.Add(new Hog());
             }
 
             int slimeCount = rand.Next(1, 4);
-            Slime[] slimes = new Slime[slimeCount];
             for (int i = 0; i < slimeCount; i++)
             {
-                slimes[i] = new Slime();
+                monsters.Add(new Slime());
             }
 
             Player player = new Player();
 
             //이동
-            for (int i = 0; i < goblinCount; i++)
+            for (int i = 0; i < monsters.Count; i++)
             {
-                goblins[i].Move();
-            }
-            for (int i = 0; i < hogCount; i++)
-            {
-                hogs[i].Move();
-            }
-            for (int i = 0; i < slimeCount; i++)
-            {
-                slimes[i].Move();
+                
+                (monsters[i] as Monster).Move();
             }
 
             player.Move();

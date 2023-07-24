@@ -15,5 +15,10 @@ namespace L20230719
         {
             Console.WriteLine(name + "이/가 삭제되었습니다.");
         }
+
+        public override void Move()
+        {
+            Console.WriteLine(name + "이 미끄러진다.");
+        }
     }
 }

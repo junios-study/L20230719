@@ -20,7 +20,7 @@ namespace L20230719
         public int gold = 0;
         public string name = string.Empty;
 
-        public void Move()
+        public virtual void Move()
         {
             Console.WriteLine(name + "이/가 움직인다.");
         }
