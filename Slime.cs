@@ -7,13 +7,13 @@ namespace L20230719
         public Slime()
         {
             name = "슬라임";
-            Console.WriteLine(name + "이/가 생성 되었다.");
+            Console.WriteLine(name + " 생성자");
 //            hp = 10;
         }
 
         ~Slime()
         {
-            Console.WriteLine(name + "이/가 삭제되었습니다.");
+            Console.WriteLine("슬라임 소멸자");
         }
 
         public override void Move()

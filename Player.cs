@@ -7,7 +7,7 @@ using System.Xml.Schema;
 
 namespace L20230719
 {
-    class Player 
+    class Player : Character
     {
         public Player()
         {
@@ -34,7 +34,7 @@ namespace L20230719
         public int mp = 0;
         public int gold = 0;
 
-        public void Move()
+        public override void Move()
         {
             DetailMove();
         }
@@ -49,7 +49,7 @@ namespace L20230719
 
         protected void DetailMove()
         {
-            Console.WriteLine("플레이어가 움직인다.");
+            Console.WriteLine("플레이어가 걷는다.");
         }
     }
 }
