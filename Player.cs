@@ -12,17 +12,17 @@ namespace L20230719
         public Player()
         {
             Console.WriteLine("플레이가 생성 되었다.");
-            _hp = 0;
-            _mp = 0;
-            _gold = 0;
+            hp = 0;
+            mp = 0;
+            gold = 0;
         }
 
         public Player(int inHp, int inMp, int inGold)
         {
             Console.WriteLine("플레이가 생성 되었다.");
-            _hp = inHp;
-            _mp = inMp;
-            _gold = inGold;
+            hp = inHp;
+            mp = inMp;
+            gold = inGold;
         }
 
         ~Player()
@@ -30,37 +30,9 @@ namespace L20230719
             Console.WriteLine("플레이가 삭제 되었다.");
         }
 
-        public int hp 
-        {
-            get 
-            { 
-                return _hp;
-            }
-            set 
-            {
-                if (value > 0)
-                {
-                    _hp = value;
-                }
-            }
-        }
-
-        //property 다 private
-        public int mp 
-        { 
-            get;
-            set;
-        }
-
-        public int gold
-        {
-            get;
-            set;
-        }
-
-        private int _hp = 0;
-        private int _mp = 0;
-        private int _gold = 0;
+        public int hp = 0;
+        public int mp = 0;
+        public int gold = 0;
 
         public void Move()
         {
@@ -75,7 +47,7 @@ namespace L20230719
             Console.WriteLine("플레이어가 죽었다.");
         }
 
-        private void DetailMove()
+        protected void DetailMove()
         {
             Console.WriteLine("플레이어가 움직인다.");
         }

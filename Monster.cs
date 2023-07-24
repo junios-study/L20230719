@@ -2,7 +2,7 @@
 
 namespace L20230719
 {
-    class Monster
+    class Monster //base class, parent class
     {
         public Monster() 
         {
@@ -16,7 +16,7 @@ namespace L20230719
             Console.WriteLine(name + "이/가 삭제되었습니다.");
         }
 
-        public int hp = 0;
+        private int hp = 0;
         public int gold = 0;
         public string name = string.Empty;
 
